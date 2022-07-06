@@ -1,0 +1,74 @@
+version: 1.0.0
+name: data_visualisation
+description: creating graph using data points and timestamp.
+icon: https://icons-020-demo.s3.eu-central-1.amazonaws.com/Python.png
+type: process
+tags:
+  - data_visualisation
+  - Python
+  - Data
+  - process
+categories:
+  - id: category
+    name: Process
+image:
+  name: weevenetwork/data_visualisation
+  tag: latest
+environments:
+  - key: INPUT_LABEL
+    description: The field to apply module logic on
+    value: ''
+    default: temperature
+    type: string
+    name: Input Label
+  - key: INPUT_UNIT
+    description: Input unit for data
+    value: ''
+    default: Celsius
+    type: string
+    name: Input Unit
+  - key: SAMPLE_SIZE
+    description: Number of Instance for plotting Graph
+    value: ''
+    default: 100
+    type: integer
+    name: Sample Size
+  - key: INSTANCE_INTERVAL
+    description: Time delay in second between two instances for plotting graph 
+    value: ''
+    default: 3
+    type: integer
+    name: Instance Interval
+  - key: SAMPLE_SIZE
+    description: Number of Instance for plotting Graph
+    value: ''
+    default: 100
+    type: integer
+    name: Sample Size
+  - key: SAMPLE_SIZE
+    description: Number of Instance for plotting Graph
+    value: ''
+    default: 100
+    type: integer
+    name: Sample Size
+  - key: X_AXIS_LABEL
+    description: Label for X-axis
+    value: ''
+    default: Sensor Data
+    type: string
+    name: X-axis Label
+  - key: SAMPLE_SIZE
+    description: Number of Instance for plotting Graph
+    value: ''
+    default: 100
+    type: integer
+    name: Sample Size
+commands: []
+document:
+  ports: []
+  volumes: []
+  restart_policy:
+    condition: on-failure
+    delay: 10s
+    max_attempts: 3
+    window: 120s

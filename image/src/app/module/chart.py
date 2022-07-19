@@ -1,24 +1,29 @@
 #!/usr/bin/env python
 #
 import matplotlib.pyplot as plt
+from os import path
 
+outpath = "/app/image/src/app/save_image"
 
 def plot_graph(
-	data=None, 
-	timestamp=None, 
+	data=[], 
+	timestamp=[], 
 	x_lable='timestamp',
 	y_lable='data',
 	graph_title='Sensor Data Graph',
 	chart_filename='data_graph.png'):
 
-	if isinstance(data, (None)):
-		data = []
-	if isinstance(timestamp, (None)):
-		timestamp = []
-	
 	# plotting the points
-	plt.plot(data, timestamp, color='green', linestyle='dashed', linewidth = 3,
-			marker='o', markerfacecolor='blue', markersize=1)
+	plt.plot(
+		timestamp,
+		data,
+		color='green',
+		linestyle='dashed',
+		linewidth = 3,
+		marker='o',
+		markerfacecolor='blue',
+		markersize=5
+		)
 
 	# naming the x axis
 	plt.xlabel(x_lable)
@@ -29,5 +34,4 @@ def plot_graph(
 	plt.title(graph_title)
 
 	# function to show the plot
-
-	plt.savefig(chart_filename)
+	plt.savefig(path.join(outpath,chart_filename))

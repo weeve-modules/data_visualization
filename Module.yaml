@@ -42,13 +42,13 @@ environments:
   - key: SAMPLE_SIZE
     description: Number of Instance for plotting Graph
     value: ''
-    default: 100
+    default: 10
     type: integer
     name: Sample Size
   - key: SAMPLE_SIZE
     description: Number of Instance for plotting Graph
     value: ''
-    default: 100
+    default: 10
     type: integer
     name: Sample Size
   - key: X_AXIS_LABEL
@@ -60,7 +60,7 @@ environments:
   - key: SAMPLE_SIZE
     description: Number of Instance for plotting Graph
     value: ''
-    default: 100
+    default: 10
     type: integer
     name: Sample Size
 commands: []

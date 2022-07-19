@@ -2,3 +2,6 @@ Flask==1.1.1
 requests
 python-dotenv
 jinja2<3.1.0
+itsdangerous==2.0.1
+werkzeug>=1.0,<2.0
+matplotlib

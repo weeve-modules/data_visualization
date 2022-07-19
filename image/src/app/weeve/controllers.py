@@ -38,7 +38,7 @@ def main_routes(app: Flask):
             app.logger.error('Error: %s', err)
             return err, HTTP_CODES['INTERNAL_SERVER_ERROR']
 
-        module_output, err = module_main(parsed_data)
+        module_output, err = module_main(parsed_data,app.logger)
 
         if err:
             app.logger.error('Error: %s', err)
